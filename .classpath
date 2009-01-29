@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.genuitec.eclipse.j2eedt.core.J2EE14_CONTAINER"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/hsqldb.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/mysql-connector-java-5.0.0-beta-bin.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/sqlite-jdk1.5.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/sqlite.jar"/>
+	<classpathentry kind="output" path="web/WEB-INF/classes"/>
+</classpath>

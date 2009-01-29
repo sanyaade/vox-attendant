@@ -1,0 +1,75 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Universal Grammars for Auto Attendant -->
+<!-- Date: 12/04/03 -->
+<!-- Author: Matthew Henry -->
+
+
+<!--  WHERE THE HELL ARE THE GRAMMAR RETURN VALUES? -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="UNIVERSAL_HELP">
+
+
+
+<rule id="UNIVERSAL_HELP">
+
+
+<one-of>
+     <item>
+ 	
+
+
+	 <item repeat="0-1">
+	  i need
+         </item>
+
+
+  <one-of>
+	<item>
+	   dtmf-9
+        </item>
+
+	<item>
+	   help
+        </item>
+	  
+	<item>
+	   help me
+        </item>
+
+	<item>
+	   assitance
+        </item>
+
+	<item>
+	   options
+        </item>
+
+  </one-of>
+
+   <tag> <![CDATA[  <universalhelp "help">  ]]>  </tag>
+
+
+	 
+
+
+
+        <item repeat="0-1">
+	 please
+        </item>
+
+
+
+
+    </item>
+</one-of>
+
+
+</rule>
+
+
+
+
+</grammar>

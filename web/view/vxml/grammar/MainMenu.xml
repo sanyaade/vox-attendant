@@ -1,0 +1,45 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="MAINMENU">
+    <rule id="MAINMENU"> 
+        <item repeat="0-1">
+            <one-of>
+                <item>uh</item>
+                <item>um</item>
+            </one-of>
+        </item>
+        <item repeat="0-1">
+            <one-of>
+                <item>I want</item>
+                <item>I want to hear about</item>
+                <item>give me</item>
+                <item>tell me about</item>
+                <item>I'd like to hear about</item>
+                <item>can I hear about</item>
+                <item>I want to find out about</item>
+            </one-of>
+        </item>
+        <one-of> 
+            <item>
+                company info  <tag> <![CDATA[  <mainmenu "companyinfo">  ]]>  </tag> 
+            </item>
+            <item>
+                directions  <tag> <![CDATA[  <mainmenu "directions">  ]]>  </tag> 
+            </item>
+            <item>
+                driving directions  <tag> <![CDATA[  <mainmenu "directions">  ]]>  </tag> 
+            </item>
+        </one-of> 
+    </rule> 
+</grammar>
+
+
+
+
+
+
+
+
+
+
+
+

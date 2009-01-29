@@ -1,0 +1,155 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Grammars for Auto Attendant Administration -->
+<!-- Date: 12/04/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="CONTACT">
+
+
+
+
+<!-- ********** -->
+
+<rule id="CONTACT">
+
+<one-of>
+     <item>
+
+	 <item repeat="0-1">
+	  <ruleref uri="#WANNA_UPDATE"/>
+         </item>
+
+	<item repeat="0-1">
+	  contact   
+        </item>
+
+  <one-of>
+
+
+	<item>
+	  name   
+        </item>
+
+	<item>
+	  dtmf-1   
+        </item>
+
+
+  </one-of>
+
+	<tag> <![CDATA[  <contact "name">  ]]>  </tag> 
+
+
+       <item repeat="0-1">
+	
+        </item>
+
+
+        <item repeat="0-1">
+	 please
+        </item>
+
+</item>
+
+
+
+
+
+
+  <item>
+
+	 <item repeat="0-1">
+	  <ruleref uri="#WANNA_UPDATE"/>
+         </item>
+
+	<item repeat="0-1">
+	  distinct   
+        </item>
+
+
+  <one-of>
+
+
+	<item>
+	  information      
+       </item>
+
+	<item>
+	  info   
+        </item>
+
+	<item>
+	  dtmf-2   
+        </item>
+
+
+  </one-of>
+
+		<tag> <![CDATA[  <contact "distinctinfo"> ]]>  </tag> 
+
+    
+
+        <item repeat="0-1">
+	 please
+        </item>
+
+
+    </item>
+
+</one-of>
+
+</rule>
+
+
+
+
+
+
+
+<!-- subgrammar for optional utterance prefixes -->
+
+
+<rule id="WANNA_UPDATE">
+  <one-of>
+
+   <item repeat="0-1">
+	i wanna
+   </item>
+
+   <item repeat="0-1">
+     	i want to
+   </item>
+
+   <item repeat="0-1">
+	i would like
+   </item>
+
+   <item repeat="0-1">
+	like to
+   </item>
+
+   <item repeat="0-1">
+	update
+   </item>
+
+   <item repeat="0-1">
+	add a new
+   </item>
+
+   <item repeat="0-1">
+	id like
+   </item>
+
+   <item repeat="0-1">
+	i would like
+   </item>
+
+  </one-of>
+</rule>
+
+
+
+</grammar>

@@ -1,0 +1,126 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="PHONETYPE6">
+    <rule id="PHONETYPE6"> 
+        <item repeat="0-1">
+            <one-of> 
+                <item> 
+                    the
+                </item> 
+                <item> 
+                    at
+                </item> 
+            </one-of> 
+        </item>
+        <one-of>
+            <item>
+                <one-of> 
+                    <item> 
+                        office   
+                        <item repeat="0-1"> phone </item>
+                    </item> 
+                    <item> 
+                        work    
+                        <item repeat="0-1"> phone </item>
+                    </item> 
+                    <item> 
+                        dtmf-1   
+                    </item>
+                </one-of> 
+                <tag> <![CDATA[  <phonetype "work">  ]]>  </tag> 
+            </item>
+            <item>
+                <one-of> 
+                    <item> 
+                        mobile   
+                        <item repeat="0-1"> phone </item>
+                    </item> 
+                    <item> 
+                        cell
+                        <item repeat="0-1"> phone </item>
+                    </item> 
+                    <item> 
+                        cellular
+                        <item repeat="0-1"> phone </item>
+                    </item> 
+                    <item> 
+                        dtmf-2   
+                    </item> 
+                </one-of>
+                <tag> <![CDATA[  <phonetype "mobile">  ]]>  </tag> 
+            </item>
+            <item>
+                <one-of> 
+                    <item> 
+                        voicemail   
+                    </item> 
+                    <item> 
+                        leave a message
+                    </item> 
+                    <item> 
+                        dtmf-3   
+                    </item> 
+                </one-of>
+                <tag> <![CDATA[  <phonetype "voicemail">  ]]>  </tag> 
+            </item>
+            <item> 
+                <one-of>
+                    <item> 
+                        stop         
+                    </item>
+                    <item> 
+                        go back         
+                    </item>
+                    <item> 
+                        dont call         
+                    </item>
+                    <item> 
+                        cancel         
+                    </item>
+                    <item> 
+                        dtmf-star   
+                    </item>
+                </one-of>
+                <tag> <![CDATA[  <phonetype "cancel">  ]]>  </tag> 
+            </item> 
+        </one-of>
+        <item repeat="0-1">
+	please
+        </item>
+    </rule>
+    <rule id="CANCEL"> 
+        <one-of>
+            <item>
+                <one-of> 
+                    <item> 
+                        cancel   
+                    </item> 
+                    <item> 
+                        no   
+                    </item> 
+                </one-of>
+                <tag> <![CDATA[  <cancel "cancel">  ]]>  </tag>
+            </item>
+            <item>
+                <one-of>
+                    <item> 
+                        connect  
+                    </item>
+                </one-of> 
+                <tag> <![CDATA[  <cancel "connect">  ]]>  </tag> 
+            </item>
+        </one-of>
+    </rule>
+    
+</grammar>
+
+
+
+
+
+
+
+
+
+
+
+

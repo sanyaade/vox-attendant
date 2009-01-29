@@ -1,0 +1,19 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="TRANSFER_CANCEL">
+    <rule id="TRANSFER_CANCEL"> 
+        <item>
+            <one-of> 
+                <item> 
+                    cancel   
+                </item> 
+                <item> 
+                    stop   
+                </item> 
+                <item> 
+                    stop to cancel
+                </item> 
+            </one-of>
+            <tag> <![CDATA[  <cancel "cancel">  ]]>  </tag>
+        </item>
+    </rule>
+</grammar>

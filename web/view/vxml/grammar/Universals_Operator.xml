@@ -1,0 +1,45 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="UNIVERSAL_OPERATOR">
+    <rule id="UNIVERSAL_OPERATOR">
+        <one-of>
+            <item>
+                <item repeat="0-1">
+                    i need 
+                </item>
+                <item repeat="0-1">
+                    connect me to
+                </item>
+                <item repeat="0-1">
+                    can i get
+                </item>
+                <item repeat="0-1">
+                    talk to a
+                </item>
+                <one-of>
+                    <item>
+                        operator
+                    </item>
+                    <item>
+                        human
+                    </item>
+                    <item>
+                        receptionist
+                    </item>
+                    <item>
+                        front desk
+                    </item>
+                    <item>
+                        dtmf-0
+                    </item>
+                    <item>
+                        i dont know
+                    </item>
+                </one-of>
+                <tag> <![CDATA[  <mainmenu "operator">  ]]>  </tag>
+                <item repeat="0-1">
+                    please
+                </item>
+            </item>
+        </one-of>
+    </rule>
+</grammar>

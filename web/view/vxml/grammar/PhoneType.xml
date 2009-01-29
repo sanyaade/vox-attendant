@@ -1,0 +1,313 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Grammars for Auto Attendant -->
+<!-- Date: 12/03/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="PHONETYPE">
+
+
+<!-- ********** -->
+
+
+
+
+<rule id="PHONETYPE"> 
+
+  <one-of>
+    <item>
+  	 
+
+      <one-of> 
+
+
+        <item> 
+	   office   
+           <item repeat="0-1"> phone </item>
+        </item> 
+
+
+        <item> 
+
+	   work    
+           <item repeat="0-1"> phone </item>
+
+        </item> 
+
+        <item> 
+	   dtmf-1   
+        </item>
+ 
+      </one-of> 
+		
+  	 
+			<tag> <![CDATA[  <phonetype "office">  ]]>  </tag> 
+
+   </item>
+
+
+
+    <item>
+  	
+
+      <one-of> 
+
+        <item> 
+	   cell  
+           <item repeat="0-1"> phone </item>
+        </item> 
+
+        <item> 
+	   cellular   
+           <item repeat="0-1"> phone </item>
+        </item> 
+
+
+        <item> 
+	   dtmf-2   
+        </item> 
+
+      </one-of>
+  	
+
+		<tag> <![CDATA[  <phonetype "cell">  ]]>  </tag> 
+
+   </item>
+
+
+
+
+
+        <item> 
+
+
+  	
+
+        <one-of>
+
+          <item> 
+	    stop         
+          </item>
+
+          <item> 
+	    dont call         
+          </item>
+
+          <item> 
+	    cancel         
+          </item>
+
+         </one-of>
+
+  	  
+
+	     <tag> <![CDATA[  <phonetype "cancel">  ]]>  </tag> 
+
+        </item> 
+
+    
+
+  </one-of>
+
+</rule>
+
+ 
+<!-- ********** -->
+
+<rule id="CANCEL"> 
+
+  <one-of>
+    <item>
+  
+      <one-of> 
+
+
+        <item> 
+	   cancel   
+        </item> 
+
+        <item> 
+	   no   
+        </item> 
+
+	</one-of>
+  	 
+			<tag> <![CDATA[  <cancel "cancel">  ]]>  </tag>
+
+       
+
+
+    </item>
+   
+
+
+    <item>
+  	  
+
+     <one-of>
+
+        <item> 
+	   connect  
+        </item>
+
+     </one-of> 
+
+  	
+      			<tag> <![CDATA[  <cancel "connect">  ]]>  </tag> 
+
+      
+
+    </item>
+
+  </one-of>
+
+</rule>
+
+
+
+
+<rule id="SAMENAME"> 
+      <one-of> 
+
+
+<!-- !!!!!!! needs to return the slot of 'samename' !!!!!!! -->
+
+        <item> 
+  	  <ruleref uri="#DTMF_AND_DIGIT"/>
+        </item> 
+
+        <item> 
+  	  
+
+	   repeat   <tag> <![CDATA[  <samename "repeat">  ]]>  </tag>
+
+             
+
+              <item repeat="0-1"> directions </item>
+
+              <item repeat="0-1"> list </item>
+
+             
+        </item> 
+      </one-of>
+</rule>
+
+
+
+
+<!-- ***** OUR ONE AND ONLY SUBGRAMMAR ***** -->
+
+<rule id="DTMF_AND_DIGIT">
+      <one-of>
+
+<!-- start DTMF grammar -->
+
+        <item> 
+	    dtmf-1  <tag> return ("1")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-2  <tag> return ("2")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-3  <tag> return ("3")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-4  <tag> return ("4")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-5  <tag> return ("5")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-6  <tag> return ("6")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-7  <tag> return ("7")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-8  <tag> return ("8")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-9  <tag> return ("9")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-0  <tag> return ("0")  </tag>
+        </item> 
+
+<!-- start voice grammar -->
+
+        <item> 
+	    one  <tag> return ("1")  </tag>
+        </item> 
+
+        <item> 
+	    two  <tag> return ("2")  </tag>
+        </item> 
+
+        <item> 
+	    three  <tag> return ("3")  </tag>
+        </item> 
+
+        <item> 
+	    four  <tag> return ("4")  </tag>
+        </item> 
+
+        <item> 
+	    five  <tag> return ("5")  </tag>
+        </item> 
+
+        <item> 
+	    six  <tag> return ("6")  </tag>
+        </item> 
+
+        <item> 
+	    seven  <tag> return ("7")  </tag>
+        </item> 
+
+        <item> 
+	    eight  <tag> return ("8")  </tag>
+        </item> 
+
+        <item> 
+	    nine  <tag> return ("9")  </tag>
+        </item> 
+
+        <item> 
+	    zero  <tag> return ("0")  </tag>
+        </item> 
+
+        <item> 
+	    oh    <tag> return ("0")  </tag>
+        </item> 
+
+      </one-of>
+
+</rule>
+    
+
+<!-- ********** -->
+
+
+</grammar>
+
+
+
+
+
+
+
+
+
+
+
+

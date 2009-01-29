@@ -1,0 +1,37 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Main Menu Grammars for Auto Attendant -->
+<!-- Date: 12/04/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="MENU_NO_DIRECTION">
+
+
+
+
+<rule id="MENU_NO_DIRECTION"> 
+      <one-of> 
+
+
+        <item> 
+  	  
+	   departments   <tag> <![CDATA[  <mainmenu "listdepartments">  ]]>  </tag> 
+        </item> 
+
+        <item>
+  	 
+           technology  <tag> <![CDATA[  <mainmenu "voxattendant">  ]]>  </tag> 
+        </item>
+
+        <item>
+  	  
+           voxattendant  <tag> <![CDATA[  <mainmenu "voxattendant">  ]]>  </tag> 
+        </item>
+
+      </one-of> 
+    </rule> 
+
+</grammar>

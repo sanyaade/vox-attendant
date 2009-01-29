@@ -1,0 +1,36 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="UNIVERSAL_MAINMENU">
+    <rule id="UNIVERSAL_MAINMENU">
+        <one-of>
+            <item>
+                <item repeat="0-1">
+                    take me back to the
+                </item>
+                <item repeat="0-1">
+                    go back to
+                </item>
+                <one-of>
+                    <item>
+                        main
+                    </item>
+                    <item>
+                        main menu
+                    </item>
+                    <item>
+                        menu
+                    </item>
+                    <item>
+                        start
+                    </item>
+                    <item>
+                        beginning
+                    </item>
+                </one-of>
+                <tag> <![CDATA[  <mainmenu "mainmenu">  ]]>  </tag>
+                <item repeat="0-1">
+                    please
+                </item>
+            </item>
+        </one-of>
+    </rule>
+</grammar>

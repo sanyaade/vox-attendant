@@ -1,0 +1,49 @@
+<?xml version= "1.0"?>
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="YES_NO">
+    <rule id="YES_NO"> 
+        <one-of>
+            
+            <item>
+                <one-of> 
+                    <item>yes</item>
+                    <item>yup</item> 
+                    <item>sure</item>
+                    <item>okay</item> 
+                    <item>right</item>
+                    <item>you got it</item> 
+                    <item>yes i do</item>
+                    <item>yes i would</item> 
+                    <item>yes it is correct</item>
+                    <item>yes you did</item> 
+                    <item>yes</item>
+                    <item> 
+                        dtmf-1   
+                    </item>
+                </one-of>
+                <tag> <![CDATA[  <confirm "yes">  ]]>  </tag>
+                <item repeat="0-1"> please </item>
+                
+            </item>
+            <item>
+                <one-of>   
+                    <item>nope</item>
+                    <item>nah</item>
+                    <item>incorrect</item>
+                    <item>no way</item>
+                    <item>no it isnt</item>
+                    <item>no thats not correct</item>
+                    <item>it isnt</item> 
+                    <item>no its not</item>
+                    <item>no i dont</item>
+                    <item>no i do not</item> 
+                    <item>no</item>
+                    <item> 
+                        dtmf-2   
+                    </item>
+                </one-of> 
+                <tag> <![CDATA[  <confirm "no">  ]]>  </tag>
+                <item repeat="0-1"> please </item>
+            </item>
+        </one-of>
+    </rule> 
+</grammar>

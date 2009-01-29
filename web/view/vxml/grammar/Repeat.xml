@@ -1,0 +1,60 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Grammars for Auto Attendant -->
+<!-- Date: 12/03/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="REPEAT">
+
+
+<!-- ********** -->
+
+<rule id="REPEAT"> 
+      <one-of> 
+
+        <item> 
+
+  	  
+
+       <one-of>
+         <item>
+	   repeat    <tag> <![CDATA[  <selection "repeat">  ]]>  </tag> 
+	 </item>
+
+         <item>
+	   re peat   <tag> <![CDATA[  <selection "repeat">  ]]>  </tag> 
+         </item>
+
+         <item>
+	   ree pete   <tag> <![CDATA[  <selection "repeat">  ]]>  </tag> 
+         </item>
+       </one-of>
+
+              <item repeat="0-1"> 
+		directions 
+	      </item>
+
+              <item repeat="0-1">
+		list 
+	      </item>
+
+
+              <item repeat="0-1">
+		please 
+	      </item>
+
+  	     
+      
+        </item> 
+
+      </one-of> 
+    </rule> 
+
+
+
+<!-- ********** -->
+
+
+</grammar>

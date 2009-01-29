@@ -1,0 +1,85 @@
+<?xml version= "1.0"?>
+
+<!-- Temporary SRGS Grammar for Auto Attendant; for testing only -->
+<!-- Date: 12/03/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="MOREDIRECTIONS">
+
+
+
+<!-- ********** -->
+
+<rule id="MOREDIRECTIONS"> 
+      <one-of> 
+
+
+        <item> 
+  	
+	   london   <tag> <![CDATA[  <mainmenu "entity-5">  ]]>  </tag> 
+        </item> 
+
+
+        <item> 
+  	 
+	   office <tag> <![CDATA[  <mainmenu "entity-2">  ]]>  </tag> 
+  	
+        </item> 
+
+        <item> 
+  	  
+	   sales <tag> <![CDATA[  <mainmenu "entity-1">  ]]>  </tag> 
+  	
+        </item> 
+
+        <item> 
+  	
+	   porch <tag> <![CDATA[  <mainmenu "entity-99">  ]]>  </tag> 
+  	
+        </item> 
+
+        <item> 
+  	
+	   support <tag> <![CDATA[  <mainmenu "entity-22">  ]]>  </tag> 
+  	
+        </item> 
+
+        <item> 
+  	
+	   tek support <tag> <![CDATA[  <mainmenu "entity-2">  ]]>  </tag> 
+  	
+        </item> 
+
+        <item> 
+  	
+	   management <tag> <![CDATA[  <mainmenu "entity-44">  ]]>  </tag> 
+  	
+        </item> 
+
+
+
+
+      </one-of> 
+    </rule> 
+
+
+
+
+<!-- ********** -->
+
+
+</grammar>
+
+
+
+
+
+
+
+
+
+
+
+

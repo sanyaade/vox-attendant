@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN"
+"http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+   <tlibversion>1.0</tlibversion>
+   <jspversion>1.1</jspversion>
+   <shortname>attendant</shortname>
+   <uri>http://www.voxattendant.org/taglib/voxattendant.jar</uri>
+   <info>Tag library for AutoAttendant</info>
+   <tag>
+      <name>audio</name>
+      <tagclass>org.voxattendant.taglib.AudioTag</tagclass>
+      <bodycontent>jsp</bodycontent>
+      <info>Audio formatting tag</info>
+	<attribute>
+         <name>audiodir</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+	
+   </tag>
+   <tag>
+      <name>playAudio</name>
+      <tagclass>org.voxattendant.taglib.PlayAudioTag</tagclass>
+      <bodycontent>jsp</bodycontent>
+      <info>PlayAudio formatting tag</info>
+      <attribute>
+         <name>audiodir</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>name</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+   <tag>
+      <name>digitsGrammar</name>
+      <tagclass>org.voxattendant.taglib.DigitsGrammarTag</tagclass>
+      <bodycontent>empty</bodycontent>
+      <info>Digits Grammar Generation tag</info>
+   </tag>
+   <tag>
+      <name>vxmlEvent</name>
+      <tagclass>org.voxattendant.taglib.VxmlEventTag</tagclass>
+      <bodycontent>empty</bodycontent>
+      <info>Vxml Event Generation tag</info>
+      <attribute>
+         <name>type</name>
+         <required>true</required>
+         <rtexprvalue>false</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>finalURI</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>promptSet</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>reprompt</name>
+         <required>false</required>
+         <rtexprvalue>false</rtexprvalue>
+      </attribute>
+   </tag>
+   <tag>
+      <name>navigate</name>
+      <tagclass>org.voxattendant.taglib.NavigateTag</tagclass>
+      <bodycontent>empty</bodycontent>
+      <info>Navigate tag</info>
+      <attribute>
+         <name>value</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>type</name>
+         <required>true</required>
+         <rtexprvalue>false</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>onClick</name>
+         <required>false</required>
+         <rtexprvalue>false</rtexprvalue>
+      </attribute>
+   </tag>
+   <tag>
+      <name>alphabetlink</name>
+      <tagclass>org.voxattendant.taglib.AlphabetLinkTag</tagclass>
+      <bodycontent>empty</bodycontent>
+      <info>Navigate tag</info>
+      <attribute>
+         <name>linked</name>
+         <required>false</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+   <tag>
+      <name>displayText</name>
+      <tagclass>org.voxattendant.taglib.DisplayTextTag</tagclass>
+      <bodycontent>empty</bodycontent>
+      <info>Format a text string</info>
+      <attribute>
+         <name>format</name>
+         <required>true</required>
+         <rtexprvalue>false</rtexprvalue>
+      </attribute>
+      <attribute>
+         <name>text</name>
+         <required>true</required>
+         <rtexprvalue>true</rtexprvalue>
+      </attribute>
+   </tag>
+</taglib>

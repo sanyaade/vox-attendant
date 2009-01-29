@@ -1,0 +1,52 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Grammars for Auto Attendant -->
+<!-- Date: 12/03/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="MOREDIRECTIONS">
+
+
+
+<!-- ********** -->
+
+<rule id="MOREDIRECTIONS"> 
+      <one-of> 
+
+
+        <item> 
+  	 
+	   details   <tag> <![CDATA[  <moredirections "details">  ]]>  </tag> 
+        </item> 
+
+
+        <item> 
+  	 
+	   repeat <tag> <![CDATA[  <moredirections "repeat">  ]]>  </tag> 
+  	  
+        </item> 
+
+      </one-of> 
+    </rule> 
+
+
+
+
+<!-- ********** -->
+
+
+</grammar>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+
+	<description>VoiceXML Virtual Receptionist</description>
+	<display-name>voxattendant</display-name>
+
+	<servlet>
+		<servlet-name>MainController</servlet-name>
+		<servlet-class>org.voxattendant.controller.MainController</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>org.voxattendant.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ContactController</servlet-name>
+		<servlet-class>org.voxattendant.controller.ContactController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SettingsController</servlet-name>
+		<servlet-class>org.voxattendant.controller.SettingsController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UtilController</servlet-name>
+		<servlet-class>org.voxattendant.controller.UtilController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RecordController</servlet-name>
+		<servlet-class>org.voxattendant.controller.RecordController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EntityController</servlet-name>
+		<servlet-class>org.voxattendant.controller.EntityController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MainController</servlet-name>
+		<url-pattern>/MainController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/LoginController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ContactController</servlet-name>
+		<url-pattern>/ContactController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SettingsController</servlet-name>
+		<url-pattern>/SettingsController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UtilController</servlet-name>
+		<url-pattern>/UtilController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RecordController</servlet-name>
+		<url-pattern>/RecordController</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>EntityController</servlet-name>
+		<url-pattern>/EntityController</url-pattern>
+	</servlet-mapping>
+	
+	<jsp-config>
+		<taglib>
+			<taglib-uri>autoattendant</taglib-uri>
+			<taglib-location>/WEB-INF/taglib/attendant.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+</web-app>

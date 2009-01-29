@@ -1,0 +1,153 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Grammars for Auto Attendant Administration -->
+<!-- Date: 12/04/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="PASSCODE">
+
+
+
+<!-- ********** -->
+
+
+
+<rule id="PASSCODE">
+ <one-of>
+     <item repeat="4">
+	<ruleref uri="#DTMF_AND_DIGIT"/>
+     </item>
+ </one-of>
+</rule>
+
+
+
+
+
+
+
+
+
+<rule id="DTMF_AND_DIGIT">
+      <one-of>
+
+   <item> 1 </item>
+   <item> 2 </item>
+   <item> 3 </item>
+   <item> 4 </item>
+   <item> 5 </item>
+   <item> 6 </item>
+   <item> 7 </item>
+   <item> 8 </item>
+   <item> 9 </item>
+
+<!--
+   <item> dtmf-1 <tag> <![CDATA[  <passcode "1">  ]]>  </tag> </item>
+   <item> dtmf-2 <tag> <![CDATA[  <passcode "2">  ]]>  </tag></item>
+   <item> dtmf-3 <tag> <![CDATA[  <passcode "3">  ]]>  </tag></item>
+   <item> dtmf-4 <tag> <![CDATA[  <passcode "4">  ]]>  </tag></item>
+   <item> dtmf-5 <tag> <![CDATA[  <passcode "5">  ]]>  </tag></item>
+   <item> dtmf-6 <tag> <![CDATA[  <passcode "6">  ]]>  </tag></item>
+   <item> dtmf-7 <tag> <![CDATA[  <passcode "7">  ]]>  </tag></item>
+   <item> dtmf-8 <tag> <![CDATA[  <passcode "8">  ]]>  </tag></item>
+   <item> dtmf-9 <tag> <![CDATA[  <passcode "9">  ]]>  </tag></item>
+   <item> dtmf-0 <tag> <![CDATA[  <passcode "0">  ]]>  </tag></item>
+-->
+
+<!--
+
+        <item> 
+	    dtmf-1  <tag> return ("1")   </tag>
+        </item> 
+
+        <item> 
+	    dtmf-2  <tag> return ("2")   </tag>
+        </item> 
+
+        <item> 
+	    dtmf-3  <tag> return ("3")   </tag>
+        </item> 
+
+        <item> 
+	    dtmf-4  <tag> return ("4")   </tag>
+        </item> 
+
+        <item> 
+	    dtmf-5  <tag> return ("5")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-6  <tag> return ("6")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-7  <tag> return ("7")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-8  <tag> return ("8")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-9  <tag> return ("9")  </tag>
+        </item> 
+
+        <item> 
+	    dtmf-0  <tag> return ("0")  </tag>
+        </item> 
+
+-->
+
+      </one-of>
+
+</rule>
+
+
+
+<!-- subgrammar for optional utterance prefixes -->
+
+
+<rule id="WANNA_UPDATE">
+  <one-of>
+
+   <item repeat="0-1">
+	i wanna
+   </item>
+
+   <item repeat="0-1">
+     	i want to
+   </item>
+
+   <item repeat="0-1">
+	i would like
+   </item>
+
+   <item repeat="0-1">
+	like to
+   </item>
+
+   <item repeat="0-1">
+	update
+   </item>
+
+   <item repeat="0-1">
+	add a new
+   </item>
+
+   <item repeat="0-1">
+	id like
+   </item>
+
+   <item repeat="0-1">
+	i would like
+   </item>
+
+  </one-of>
+</rule>
+
+
+
+</grammar>
+

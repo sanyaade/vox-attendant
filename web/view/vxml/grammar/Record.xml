@@ -1,0 +1,132 @@
+<?xml version= "1.0"?>
+
+<!-- SRGS Grammars for Auto Attendant Administration -->
+<!-- Date: 12/04/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="RECORD">
+
+
+<!-- ********** -->
+
+
+<rule id="RECORD">
+
+<one-of>
+     <item>
+
+	 <item repeat="0-1">
+	  <ruleref uri="#WANNA_UPDATE"/>
+         </item>
+
+     
+
+
+  <one-of>
+
+
+	<item>
+	  save   <tag> <![CDATA[  <record "save">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  dtmf-1   <tag> <![CDATA[  <record "save">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  review   <tag> <![CDATA[  <record "review">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  dtmf-2   <tag> <![CDATA[  <record "review">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  record   <tag> <![CDATA[  <record "again">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  dtmf-3   <tag> <![CDATA[  <record "again">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  cancel   <tag> <![CDATA[  <record "cancel">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  stop   <tag> <![CDATA[  <record "cancel">  ]]>  </tag> 
+        </item>
+
+	<item>
+	  dtmf-4   <tag> <![CDATA[  <record "cancel">  ]]>  </tag> 
+        </item>
+
+  </one-of>
+
+       
+
+        <item repeat="0-1">
+	 it
+        </item>
+
+        <item repeat="0-1">
+	 please
+        </item>
+
+
+    </item>
+
+</one-of>
+
+</rule>
+
+
+<!-- ********** -->
+
+
+<!-- subgrammar for optional utterance prefixes -->
+
+
+<rule id="WANNA_UPDATE">
+  <one-of>
+
+   <item repeat="0-1">
+	i wanna
+   </item>
+
+   <item repeat="0-1">
+     	i want to
+   </item>
+
+   <item repeat="0-1">
+	i would like
+   </item>
+
+   <item repeat="0-1">
+	like to
+   </item>
+
+   <item repeat="0-1">
+	update
+   </item>
+
+   <item repeat="0-1">
+	add a new
+   </item>
+
+   <item repeat="0-1">
+	id like
+   </item>
+
+   <item repeat="0-1">
+	i would like
+   </item>
+
+  </one-of>
+</rule>
+
+
+
+</grammar>

@@ -1,0 +1,24 @@
+#Start URL's.
+Jetty web root: http://127.0.0.1:9991
+Voxeo web admin interface: http://127.0.0.1:9995/mc.php  
+voxattendant web: http://127.0.0.1:9991/vox-attendant    (pw: 2001)
+voxattendant voice: http://127.0.0.1:9991/vox-attendant/LoginController
+
+#Log locations
+-If the app doesn't work at all first check the Voxeo\Logs\vappserver.log file for errors.
+-Application errors are in the webapps\voxattendant\WEB-INF\log\jsp.log file and can be very helpful when debugging issues.
+
+#General Notes on using Jetty and building the auto-attendant
+Jetty is very particular about web.xml configurations, so if you define a servlet class or mapping that is not present, it just won't work.  One clue is that instead of serving up jsp's, you'll get a download file dialog box.  Check your logs when this happens.
+
+If you run a clean build of the project, you MUST create a WEB-INF/log directory if 
+it's not already there.  The vox-attendant requires this, but does not create it if 
+not already present.  
+
+The app has also been tested with Tomcat, and should run on any standard servlet 
+container including JBoss, WebSphere, WebLogic, etc.
+
+#Issues
+Please note that if you are testing with contacts that have sip urls versus 10 digit phone numbers for the work phone, then selecting the voicemail enabled checkbox (and provsioning a voxmail account) will not work correctly.  Currently, Voxmail only supports 10 digit TN's and login phone numbers.
+
+

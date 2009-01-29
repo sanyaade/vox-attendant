@@ -1,0 +1,58 @@
+<?xml version= "1.0"?>
+
+<!-- Temporary SRGS Grammar for Auto Attendant; for testing only -->
+<!-- Date: 12/03/03 -->
+<!-- Author: Matthew Henry -->
+
+
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en-US" root="MOREDIRECTIONS">
+
+
+
+<!-- ********** -->
+
+<rule id="MOREDIRECTIONS"> 
+      <one-of> 
+
+
+        <item> 
+  	  
+	   i map   <tag> <![CDATA[  <mainmenu "contact-67">  ]]>  </tag> 
+        </item> 
+
+
+        <item> 
+  	  
+	   mail dur <tag> <![CDATA[  <mainmenu "contact-66">  ]]>  </tag> 
+  	
+        </item> 
+
+        <item> 
+  	 
+	   pop <tag> <![CDATA[  <mainmenu "contact-65">  ]]>  </tag> 
+  	 
+        </item> 
+
+      </one-of> 
+    </rule> 
+
+
+
+
+<!-- ********** -->
+
+
+</grammar>
+
+
+
+
+
+
+
+
+
+
+
+
