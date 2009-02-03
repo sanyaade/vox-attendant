@@ -9,7 +9,7 @@
  * implied. See the License for the specific language governing
  * rights and limitations under the License.
  *
- * The Original Code is vox-mail.
+ * The Original Code is vox-attendant.
  *
  * The Initial Developer of the Original Code is Voxeo Corporation.
  * Portions created by Voxeo are Copyright (C) 2000-2007.
